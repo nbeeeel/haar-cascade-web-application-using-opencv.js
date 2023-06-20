@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opencv JS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        h2, h3 {
+            text-align: center;
+            color: #333;
+            margin: 0;
+            padding: 10px;
+        }
+
+        video, canvas {
+            display: block;
+            margin: 0 auto;
+            background-color: #000;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        #buttonContainer {
+            padding: 7px 15px;
+            font-size: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #buttonContainer:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script async src="js/opencv.js" onload="openCvReady();"></script>
+    <script src="js/haar.js"></script>
+    <script src="js/utils.js"></script>
+</head>
+<body>
+    <video id="cam_input" height="320" width="480"></video>
+    <canvas id="canvas_output"></canvas>
+    <h2>Haar Cascade Based Face and Eyes Detection</h2>
+    <h3>Click the button to toggle between Simple Face Detection and Face + Eyes Detection.</h3>
+    <div id="buttonContainer">
+    </div>
+    </body>
+</html>
